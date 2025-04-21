@@ -28,9 +28,6 @@ def main():
         for ing in df_cocktail["recipe"].values:
             col1.write(f"{ing}")
             
-        col2.write(f"\n")
-        col2.write(f"\n")
-        col2.write(f"\n")
         col2.write(f"Copa: {df_cocktail['glass'].unique()[0]}\n")
         col2.write(f"Decoración: {df_cocktail['garnish'].unique()[0]}\n")
         col2.write(f"Método: {df_cocktail['directions'].unique()[0]}")
