@@ -68,14 +68,14 @@ def main():
             for i in range(10):
                 col111, col222 = st.columns([1, 1])
                 if i == 0:
-                    input_unit = col111.text_input(label = "Unidad", key = i).upper()
-                    input_ingredient_name = col222.text_input(label = "Ingrediente", key = (i + 1)*10).upper()
+                    input_unit = col111.text_input(label = "Unidad", key = i, placeholder = f"Unidad {i + 1}").upper()
+                    input_ingredient_name = col222.text_input(label = "Ingrediente", key = (i + 1)*10, placeholder = f"Ingrediente {i + 1}").upper()
 
                     ingredients.append([input_unit, input_ingredient_name])
 
                 else:
-                    input_unit = col111.text_input(label = "Unidad", key = i, label_visibility = "hidden", ).upper()
-                    input_ingredient_name = col222.text_input(label = "Ingrediente", key = (i + 1)*10, label_visibility = "hidden").upper()
+                    input_unit = col111.text_input(label = "Unidad", key = i, label_visibility = "hidden", placeholder = f"Unidad {i + 1}").upper()
+                    input_ingredient_name = col222.text_input(label = "Ingrediente", key = (i + 1)*10, label_visibility = "hidden", placeholder = f"Ingrediente {i + 1}").upper()
 
                     if input_unit != "" and input_ingredient_name != "":
                         ingredients.append([input_unit, input_ingredient_name])
